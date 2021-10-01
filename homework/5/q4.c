@@ -28,7 +28,7 @@ int main(int argc, char *argv[]){
                 break;
             
             case 1:
-                execl(PATH, NULL);
+                execl(PATH, "ls", (char *)NULL);
                 break;
             
         }
