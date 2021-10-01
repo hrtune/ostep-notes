@@ -28,8 +28,16 @@ int main(int argc, char *argv[]){
                 break;
             
             case 1:
-                execl(PATH, "ls", (char *)NULL);
+                execl(PATH, "ls", (char *) NULL);
                 break;
+            
+            case 2:
+                execlp("ls", "ls", (char *) NULL);
+                break;
+            
+            case 3:
+                execvp("ls", args);
+            
             
         }
     } else {
