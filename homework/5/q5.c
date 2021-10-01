@@ -7,7 +7,7 @@
 #define PATH "/bin/ls"
 
 int main(int argc, char *argv[]){
-    
+
     /*if(argc < 2){
         printf("error: no argument\n");
         exit(1);
@@ -21,8 +21,10 @@ int main(int argc, char *argv[]){
         exit(1);
     } else if (rc == 0){
         printf("hello!\n");
-    } else {
         wait(NULL);
+    } else {
+        pid_t wp = wait(NULL);
+        printf("Child pid: %d\n", wp);
         printf("goodbye!\n");
     }
     return 0;
