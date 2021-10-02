@@ -1,29 +1,44 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include <unistd.h>
-#include <string.h>
-#include <fcntl.h>
-#include <sys/wait.h>
+#include <stdlib.h>
 
-int main(){
-    pid_t child_a, child_b;
 
-    child_a = fork();
-
-    if (child_a == 0) {
-        // child a code
-        printf("a\n");
-    } else {
-        child_b = fork();
-
-        if (child_b == 0) {
-            /* Child B code */
-            waitpid(child_a, NULL, 0);
-            printf("b\n");
-        } else {
-            /* Parent Code */
-            waitpid(child_b, NULL, 0);
-            printf("p\n");
+int main(int argc, char** argv)
+{
+        int des_p[2];
+        if(pipe(des_p) == -1) {
+          perror("Pipe failed");
+          exit(1);
         }
-    }
+
+        if(fork() == 0)            //first fork
+        {
+            close(STDOUT_FILENO);  //closing stdout
+            dup(des_p[1]);         //replacing stdout with pipe write 
+            close(des_p[0]);       //closing pipe read
+            close(des_p[1]);
+
+            const char* prog1[] = { "ls", "-l", 0};
+            execvp(prog1[0], prog1);
+            perror("execvp of ls failed");
+            exit(1);
+        }
+
+        if(fork() == 0)            //creating 2nd child
+        {
+            close(STDIN_FILENO);   //closing stdin
+            dup(des_p[0]);         //replacing stdin with pipe read
+            close(des_p[1]);       //closing pipe write
+            close(des_p[0]);
+
+            const char* prog2[] = { "wc", "-l", 0};
+            execvp(prog2[0], prog2);
+            perror("execvp of wc failed");
+            exit(1);
+        }
+
+        close(des_p[0]);
+        close(des_p[1]);
+        wait(0);
+        wait(0);
+        return 0;
 }
