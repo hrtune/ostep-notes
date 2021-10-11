@@ -11,3 +11,4 @@ This program, *scheduler.py*, allows you to see how different schedulers perform
 5. For what types of workloads and quantum lengths does SJF deliver the same response times as RR? 
 6. What happens to response time with SJF as job lengths increase? Can you use the simulator to demonstrate the trend? 
 7. What happens to response time with RR as quantum lengths increase? Can you write an equation that gives the worst-case response time, given N jobs?
+
