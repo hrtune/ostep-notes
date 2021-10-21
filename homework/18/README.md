@@ -94,20 +94,18 @@ Page Table (from entry 0 down to the max size)
 
 Your job, then, is to use this page table to translate the virtual addresses
 given to you in the trace to physical addresses. Let's look at the first one:
-VA 0x3229. To translate this virtual address into a physical address, we first
-have to break it up into its constituent components: a virtual page number and
-an offset. We do this by noting down the size of the address space and the
+VA 0x3229. To translate this virtual address into a physical address, <u>we first</u>
+<u>have to break it up into its constituent components: a virtual page number and</u>
+<u>an offset</u>. We do this by noting down the size of the address space and the
 page size. In this example, the address space is set to 16KB (a very small
 address space) and the page size is 4KB. Thus, we know that there are 14 bits
-in the virtual address, and that the offset is 12 bits, leaving 2 bits for the
-VPN. Thus, with our address 0x3229, which is binary 11 0010 0010 1001, we know
+in the virtual address, and that the <u>offset is 12 bits, leaving 2 bits for the</u>
+<u>VPN</u>. Thus, with our address 0x3229, which is binary 11 0010 0010 1001, we know
 the top two bits specify the VPN. Thus, 0x3229 is on virtual page 3 with an
 offset of 0x229.
 
 We next look in the page table to see if VPN 3 is valid and mapped to some
-physical frame or invalid, and we see that it is indeed valid (the high bit is
-1) and mapped to physical page 6. Thus, we can form our final physical address
-by taking the physical page 6 and adding it onto the offset, as follows:
+physical frame or invalid, and we see that it is indeed valid (the high bit is and mapped to physical page 6. Thus, we can form our final physical address by taking the physical page 6 and adding it onto the offset, as follows:
 0x6000 (the physical page, shifted into the proper spot) OR 0x0229 (the
 offset), yielding the final physical address: 0x6229. Thus, we can see that
 virtual address 0x3229 translates to physical address 0x6229 in this example.
