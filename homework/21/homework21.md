@@ -63,8 +63,62 @@ This homework introduces you to a new tool, **vmstat**, and how it can be used t
 >
 > The swpd value is growing as I execute ./mem with a huge argument.
 
-5 Now let’s examine performance. Pick an input for mem that comfortably fits in memory (say 4000 if the amount of memory on the system is 8 GB). How long does loop 0 take (and subsequent loops 1, 2, etc.)? Now pick a size comfortably beyond the size of memory (say 12000 again assuming 8 GB of memory). How long do the loops take here? How do the bandwidth numbers compare? How different is performance when constantly swapping versus fitting everything comfortably in memory? Can you make a graph, with the size of memory used by mem on the x-axis, and the bandwidth of accessing said memory on the y-axis? Finally, how does the performance of the first loop compare to that of subsequent loops, for both the case where everything fits in memory and where it doesn’t? 
+5 Now let’s examine performance. Pick an input for mem that comfortably fits in memory (say 4000 if the amount of memory on the system is 8 GB). 
 
-6 Swap space isn’t infinite. You can use the tool swapon with the -s flag to see how much swap space is available. What happens if you try to run mem with increasingly large values, beyond what seems to be available in swap? At what point does the memory allocation fail? 
+- How long does loop 0 take (and subsequent loops 1, 2, etc.)? 
+
+| loops | time (ms) |
+| ----- | --------- |
+| 0     | 3438.26   |
+| 1     | 1481.01   |
+| 2     | 1395.25   |
+| 3     | 1315.63   |
+| 4     | 1290.58   |
+| 5     | 1267.87   |
+| 6     | 1256.65   |
+| 7     | 1225.11   |
+| 8     | 1270.09   |
+| 9     | 1186.48   |
+
+Now pick a size comfortably beyond the size of memory (say 12000 again assuming 8 GB of memory). How long do the loops take here? 
+
+- How do the bandwidth numbers compare? 
+
+  ./mem 3500
+
+  | loops | time (ms) |
+  | ----- | --------- |
+  | 0     | 5761.96   |
+  | 1     | 4012.88   |
+  | 2     | 3938.77   |
+  | 3     | 5485.14   |
+  | 4     | 4512.90   |
+  | 5     | 3795.63   |
+  | 6     | 4074.52   |
+  | 7     | 3832.90   |
+  | 8     | 4001.56   |
+  | 9     | 3364.77   |
+
+- How different is performance when constantly swapping versus fitting everything comfortably in memory? 
+
+  > When running it with constantly swapping, the time for a loop of ./mem doesn't decrease.
+  >
+  > On the other hand, the time for a loop decreases when ./mem with comfortable MBs is executed.
+
+- Can you make a graph, with the size of memory used by mem on the x-axis, and the bandwidth of accessing said memory on the y-axis? 
+
+Finally, how does the performance of the first loop compare to that of subsequent loops, for both the case where everything fits in memory and where it doesn’t?
+
+> The first loop takes more time than subsequent loops.
+
+6 Swap space isn’t infinite. You can use the tool **swapon** with the *-s* flag to see how much swap space is available. 
+
+> Available swap space :  448MB
+
+- What happens if you try to run mem with increasingly large values, beyond what seems to be available in swap?
+
+- At what point does the memory allocation fail? 
+
+  > When the amount of the memory allocation reached the value (Available Memory Size) - (Swap Size). 
 
 7 Finally, if you’re advanced, you can configure your system to use different swap devices using swapon and swapoff. Read the man pages for details. If you have access to different hardware, see how the performance of swapping changes when swapping to a classic hard drive, a flash-based SSD, and even a RAID array. How much can swapping performance be improved via newer devices? How close can you get to in-memory performance?
