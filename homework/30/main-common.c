@@ -19,6 +19,7 @@ void usage() {
 //   marker into shared queue to signal end to consumers
 // - Then waits for consumers and prints some final info
 int main(int argc, char *argv[]) {
+    // default values
     loops = 1;
     max = 1;
     consumers = 1;
