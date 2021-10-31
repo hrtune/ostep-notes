@@ -44,7 +44,7 @@ equal to one), and `-p` and `-c` set how many producers and consumers there are,
 respectively.
 
 What is more interesting are the two sleep strings, one for producers, and one
-for consumers. These flags allow you to make each thread sleep at certain
+for consumers. These **flags** allow you to make each thread sleep at certain
 points in an execution and thus switch to other threads; doing so allows you
 to play with each solution and perhaps pinpoint specific problems or study
 other facets of the producer/consumer problem.
@@ -161,15 +161,15 @@ Consumer consumption:
 ```
 
 Before describing what is happening in this simple example, let's
-understand the depiction of the shared buffer in the output, as is
+understand the **depiction** of the shared buffer in the output, as is
 shown on the left. At first it is empty (an empty slot indicated by
 `---`, and the two empty slots shown as `[*--- --- ]`); the output
 also shows the number of entries in the buffer (`num_full`), which
 starts at 0. Then, after P0 puts a value in it, its state changes to
 `[u 0 f--- ]` (and `num_full` changes to 1). You might also notice a
-few additional markers here; the u marker shows where the `use_ptr` is
+few additional markers here; the **u** marker shows where the `use_ptr` is
 (this is where the next consumer to consume a value will get something
-from); similarly, the f marker shows where the fill_ptr is (this is
+from); similarly, the **f** marker shows where the `fill_ptr` is (this is
 where the next producer will produce a value). When you see the `*`
 marker, it just means the `use_ptr` and `fill_ptr` are pointing to the
 same slot.
@@ -224,5 +224,4 @@ consumer. Thus, if you create two producers and three consumers (with
 or `-C 0,1,2:0:3,3,3,1,1,1`). Sleep strings can be shorter than the
 number of sleep points in the code; the remaining sleep slots are
 initialized to be zero.
-
 
