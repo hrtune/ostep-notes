@@ -1,0 +1,1134 @@
+( -a 7,30,8 -S 2 -R 0.1)
+OPTIONS seed 0
+OPTIONS addr 7,30,8
+OPTIONS addrDesc 5,-1,0
+OPTIONS seekSpeed 2
+OPTIONS rotateSpeed 0.1
+OPTIONS skew 0
+OPTIONS window -1
+OPTIONS policy FIFO
+OPTIONS compute True
+OPTIONS graphics False
+OPTIONS zoning 30,30,30
+OPTIONS lateAddr -1
+OPTIONS lateAddrDesc 0,-1,0
+
+z 0 30
+z 1 30
+z 2 30
+0 30 0
+0 30 1
+0 30 2
+0 30 3
+0 30 4
+0 30 5
+0 30 6
+0 30 7
+0 30 8
+0 30 9
+0 30 10
+0 30 11
+1 0 30 12
+1 0 30 13
+1 0 30 14
+1 0 30 15
+1 0 30 16
+1 0 30 17
+1 0 30 18
+1 0 30 19
+1 0 30 20
+1 0 30 21
+1 0 30 22
+1 0 30 23
+2 0 30 24
+2 0 30 25
+2 0 30 26
+2 0 30 27
+2 0 30 28
+2 0 30 29
+2 0 30 30
+2 0 30 31
+2 0 30 32
+2 0 30 33
+2 0 30 34
+2 0 30 35
+REQUESTS ['7', '30', '8']
+
+Block:   7  Seek:  0  Rotate:150  Transfer:299  Total: 449
+Block:  30  Seek: 40  Rotate:2960  Transfer:301  Total:3301
+Block:   8  Seek: 40  Rotate:259  Transfer:300  Total: 599
+
+TOTALS      Seek: 80  Rotate:3369  Transfer:900  Total:4349
+
+
+( -a 7,30,8 -S 2 -R 0.5)
+OPTIONS seed 0
+OPTIONS addr 7,30,8
+OPTIONS addrDesc 5,-1,0
+OPTIONS seekSpeed 2
+OPTIONS rotateSpeed 0.5
+OPTIONS skew 0
+OPTIONS window -1
+OPTIONS policy FIFO
+OPTIONS compute True
+OPTIONS graphics False
+OPTIONS zoning 30,30,30
+OPTIONS lateAddr -1
+OPTIONS lateAddrDesc 0,-1,0
+
+z 0 30
+z 1 30
+z 2 30
+0 30 0
+0 30 1
+0 30 2
+0 30 3
+0 30 4
+0 30 5
+0 30 6
+0 30 7
+0 30 8
+0 30 9
+0 30 10
+0 30 11
+1 0 30 12
+1 0 30 13
+1 0 30 14
+1 0 30 15
+1 0 30 16
+1 0 30 17
+1 0 30 18
+1 0 30 19
+1 0 30 20
+1 0 30 21
+1 0 30 22
+1 0 30 23
+2 0 30 24
+2 0 30 25
+2 0 30 26
+2 0 30 27
+2 0 30 28
+2 0 30 29
+2 0 30 30
+2 0 30 31
+2 0 30 32
+2 0 30 33
+2 0 30 34
+2 0 30 35
+REQUESTS ['7', '30', '8']
+
+Block:   7  Seek:  0  Rotate: 30  Transfer: 60  Total:  90
+Block:  30  Seek: 40  Rotate:560  Transfer: 60  Total: 660
+Block:   8  Seek: 40  Rotate: 20  Transfer: 60  Total: 120
+
+TOTALS      Seek: 80  Rotate:610  Transfer:180  Total: 870
+
+
+( -a 7,30,8 -S 2 -R 0.01)
+OPTIONS seed 0
+OPTIONS addr 7,30,8
+OPTIONS addrDesc 5,-1,0
+OPTIONS seekSpeed 2
+OPTIONS rotateSpeed 0.01
+OPTIONS skew 0
+OPTIONS window -1
+OPTIONS policy FIFO
+OPTIONS compute True
+OPTIONS graphics False
+OPTIONS zoning 30,30,30
+OPTIONS lateAddr -1
+OPTIONS lateAddrDesc 0,-1,0
+
+z 0 30
+z 1 30
+z 2 30
+0 30 0
+0 30 1
+0 30 2
+0 30 3
+0 30 4
+0 30 5
+0 30 6
+0 30 7
+0 30 8
+0 30 9
+0 30 10
+0 30 11
+1 0 30 12
+1 0 30 13
+1 0 30 14
+1 0 30 15
+1 0 30 16
+1 0 30 17
+1 0 30 18
+1 0 30 19
+1 0 30 20
+1 0 30 21
+1 0 30 22
+1 0 30 23
+2 0 30 24
+2 0 30 25
+2 0 30 26
+2 0 30 27
+2 0 30 28
+2 0 30 29
+2 0 30 30
+2 0 30 31
+2 0 30 32
+2 0 30 33
+2 0 30 34
+2 0 30 35
+REQUESTS ['7', '30', '8']
+
+Block:   7  Seek:  0  Rotate:1500  Transfer:3000  Total:4500
+Block:  30  Seek: 40  Rotate:29960  Transfer:3001  Total:33001
+Block:   8  Seek: 40  Rotate:2960  Transfer:2999  Total:5999
+
+TOTALS      Seek: 80  Rotate:34420  Transfer:9000  Total:43500
+
+
+( -a 7,30,8 -S 4 -R 0.1)
+OPTIONS seed 0
+OPTIONS addr 7,30,8
+OPTIONS addrDesc 5,-1,0
+OPTIONS seekSpeed 4
+OPTIONS rotateSpeed 0.1
+OPTIONS skew 0
+OPTIONS window -1
+OPTIONS policy FIFO
+OPTIONS compute True
+OPTIONS graphics False
+OPTIONS zoning 30,30,30
+OPTIONS lateAddr -1
+OPTIONS lateAddrDesc 0,-1,0
+
+z 0 30
+z 1 30
+z 2 30
+0 30 0
+0 30 1
+0 30 2
+0 30 3
+0 30 4
+0 30 5
+0 30 6
+0 30 7
+0 30 8
+0 30 9
+0 30 10
+0 30 11
+1 0 30 12
+1 0 30 13
+1 0 30 14
+1 0 30 15
+1 0 30 16
+1 0 30 17
+1 0 30 18
+1 0 30 19
+1 0 30 20
+1 0 30 21
+1 0 30 22
+1 0 30 23
+2 0 30 24
+2 0 30 25
+2 0 30 26
+2 0 30 27
+2 0 30 28
+2 0 30 29
+2 0 30 30
+2 0 30 31
+2 0 30 32
+2 0 30 33
+2 0 30 34
+2 0 30 35
+REQUESTS ['7', '30', '8']
+
+Block:   7  Seek:  0  Rotate:150  Transfer:299  Total: 449
+Block:  30  Seek: 20  Rotate:2980  Transfer:301  Total:3301
+Block:   8  Seek: 20  Rotate:279  Transfer:300  Total: 599
+
+TOTALS      Seek: 40  Rotate:3409  Transfer:900  Total:4349
+
+
+( -a 7,30,8 -S 4 -R 0.5)
+OPTIONS seed 0
+OPTIONS addr 7,30,8
+OPTIONS addrDesc 5,-1,0
+OPTIONS seekSpeed 4
+OPTIONS rotateSpeed 0.5
+OPTIONS skew 0
+OPTIONS window -1
+OPTIONS policy FIFO
+OPTIONS compute True
+OPTIONS graphics False
+OPTIONS zoning 30,30,30
+OPTIONS lateAddr -1
+OPTIONS lateAddrDesc 0,-1,0
+
+z 0 30
+z 1 30
+z 2 30
+0 30 0
+0 30 1
+0 30 2
+0 30 3
+0 30 4
+0 30 5
+0 30 6
+0 30 7
+0 30 8
+0 30 9
+0 30 10
+0 30 11
+1 0 30 12
+1 0 30 13
+1 0 30 14
+1 0 30 15
+1 0 30 16
+1 0 30 17
+1 0 30 18
+1 0 30 19
+1 0 30 20
+1 0 30 21
+1 0 30 22
+1 0 30 23
+2 0 30 24
+2 0 30 25
+2 0 30 26
+2 0 30 27
+2 0 30 28
+2 0 30 29
+2 0 30 30
+2 0 30 31
+2 0 30 32
+2 0 30 33
+2 0 30 34
+2 0 30 35
+REQUESTS ['7', '30', '8']
+
+Block:   7  Seek:  0  Rotate: 30  Transfer: 60  Total:  90
+Block:  30  Seek: 20  Rotate:580  Transfer: 60  Total: 660
+Block:   8  Seek: 20  Rotate: 40  Transfer: 60  Total: 120
+
+TOTALS      Seek: 40  Rotate:650  Transfer:180  Total: 870
+
+
+( -a 7,30,8 -S 4 -R 0.01)
+OPTIONS seed 0
+OPTIONS addr 7,30,8
+OPTIONS addrDesc 5,-1,0
+OPTIONS seekSpeed 4
+OPTIONS rotateSpeed 0.01
+OPTIONS skew 0
+OPTIONS window -1
+OPTIONS policy FIFO
+OPTIONS compute True
+OPTIONS graphics False
+OPTIONS zoning 30,30,30
+OPTIONS lateAddr -1
+OPTIONS lateAddrDesc 0,-1,0
+
+z 0 30
+z 1 30
+z 2 30
+0 30 0
+0 30 1
+0 30 2
+0 30 3
+0 30 4
+0 30 5
+0 30 6
+0 30 7
+0 30 8
+0 30 9
+0 30 10
+0 30 11
+1 0 30 12
+1 0 30 13
+1 0 30 14
+1 0 30 15
+1 0 30 16
+1 0 30 17
+1 0 30 18
+1 0 30 19
+1 0 30 20
+1 0 30 21
+1 0 30 22
+1 0 30 23
+2 0 30 24
+2 0 30 25
+2 0 30 26
+2 0 30 27
+2 0 30 28
+2 0 30 29
+2 0 30 30
+2 0 30 31
+2 0 30 32
+2 0 30 33
+2 0 30 34
+2 0 30 35
+REQUESTS ['7', '30', '8']
+
+Block:   7  Seek:  0  Rotate:1500  Transfer:3000  Total:4500
+Block:  30  Seek: 20  Rotate:29980  Transfer:3001  Total:33001
+Block:   8  Seek: 20  Rotate:2980  Transfer:2999  Total:5999
+
+TOTALS      Seek: 40  Rotate:34460  Transfer:9000  Total:43500
+
+
+( -a 7,30,8 -S 8 -R 0.1)
+OPTIONS seed 0
+OPTIONS addr 7,30,8
+OPTIONS addrDesc 5,-1,0
+OPTIONS seekSpeed 8
+OPTIONS rotateSpeed 0.1
+OPTIONS skew 0
+OPTIONS window -1
+OPTIONS policy FIFO
+OPTIONS compute True
+OPTIONS graphics False
+OPTIONS zoning 30,30,30
+OPTIONS lateAddr -1
+OPTIONS lateAddrDesc 0,-1,0
+
+z 0 30
+z 1 30
+z 2 30
+0 30 0
+0 30 1
+0 30 2
+0 30 3
+0 30 4
+0 30 5
+0 30 6
+0 30 7
+0 30 8
+0 30 9
+0 30 10
+0 30 11
+1 0 30 12
+1 0 30 13
+1 0 30 14
+1 0 30 15
+1 0 30 16
+1 0 30 17
+1 0 30 18
+1 0 30 19
+1 0 30 20
+1 0 30 21
+1 0 30 22
+1 0 30 23
+2 0 30 24
+2 0 30 25
+2 0 30 26
+2 0 30 27
+2 0 30 28
+2 0 30 29
+2 0 30 30
+2 0 30 31
+2 0 30 32
+2 0 30 33
+2 0 30 34
+2 0 30 35
+REQUESTS ['7', '30', '8']
+
+Block:   7  Seek:  0  Rotate:150  Transfer:299  Total: 449
+Block:  30  Seek: 10  Rotate:2990  Transfer:301  Total:3301
+Block:   8  Seek: 10  Rotate:289  Transfer:300  Total: 599
+
+TOTALS      Seek: 20  Rotate:3429  Transfer:900  Total:4349
+
+
+( -a 7,30,8 -S 8 -R 0.5)
+OPTIONS seed 0
+OPTIONS addr 7,30,8
+OPTIONS addrDesc 5,-1,0
+OPTIONS seekSpeed 8
+OPTIONS rotateSpeed 0.5
+OPTIONS skew 0
+OPTIONS window -1
+OPTIONS policy FIFO
+OPTIONS compute True
+OPTIONS graphics False
+OPTIONS zoning 30,30,30
+OPTIONS lateAddr -1
+OPTIONS lateAddrDesc 0,-1,0
+
+z 0 30
+z 1 30
+z 2 30
+0 30 0
+0 30 1
+0 30 2
+0 30 3
+0 30 4
+0 30 5
+0 30 6
+0 30 7
+0 30 8
+0 30 9
+0 30 10
+0 30 11
+1 0 30 12
+1 0 30 13
+1 0 30 14
+1 0 30 15
+1 0 30 16
+1 0 30 17
+1 0 30 18
+1 0 30 19
+1 0 30 20
+1 0 30 21
+1 0 30 22
+1 0 30 23
+2 0 30 24
+2 0 30 25
+2 0 30 26
+2 0 30 27
+2 0 30 28
+2 0 30 29
+2 0 30 30
+2 0 30 31
+2 0 30 32
+2 0 30 33
+2 0 30 34
+2 0 30 35
+REQUESTS ['7', '30', '8']
+
+Block:   7  Seek:  0  Rotate: 30  Transfer: 60  Total:  90
+Block:  30  Seek: 10  Rotate:590  Transfer: 60  Total: 660
+Block:   8  Seek: 10  Rotate: 50  Transfer: 60  Total: 120
+
+TOTALS      Seek: 20  Rotate:670  Transfer:180  Total: 870
+
+
+( -a 7,30,8 -S 8 -R 0.01)
+OPTIONS seed 0
+OPTIONS addr 7,30,8
+OPTIONS addrDesc 5,-1,0
+OPTIONS seekSpeed 8
+OPTIONS rotateSpeed 0.01
+OPTIONS skew 0
+OPTIONS window -1
+OPTIONS policy FIFO
+OPTIONS compute True
+OPTIONS graphics False
+OPTIONS zoning 30,30,30
+OPTIONS lateAddr -1
+OPTIONS lateAddrDesc 0,-1,0
+
+z 0 30
+z 1 30
+z 2 30
+0 30 0
+0 30 1
+0 30 2
+0 30 3
+0 30 4
+0 30 5
+0 30 6
+0 30 7
+0 30 8
+0 30 9
+0 30 10
+0 30 11
+1 0 30 12
+1 0 30 13
+1 0 30 14
+1 0 30 15
+1 0 30 16
+1 0 30 17
+1 0 30 18
+1 0 30 19
+1 0 30 20
+1 0 30 21
+1 0 30 22
+1 0 30 23
+2 0 30 24
+2 0 30 25
+2 0 30 26
+2 0 30 27
+2 0 30 28
+2 0 30 29
+2 0 30 30
+2 0 30 31
+2 0 30 32
+2 0 30 33
+2 0 30 34
+2 0 30 35
+REQUESTS ['7', '30', '8']
+
+Block:   7  Seek:  0  Rotate:1500  Transfer:3000  Total:4500
+Block:  30  Seek: 10  Rotate:29990  Transfer:3001  Total:33001
+Block:   8  Seek: 10  Rotate:2990  Transfer:2999  Total:5999
+
+TOTALS      Seek: 20  Rotate:34480  Transfer:9000  Total:43500
+
+
+( -a 7,30,8 -S 10 -R 0.1)
+OPTIONS seed 0
+OPTIONS addr 7,30,8
+OPTIONS addrDesc 5,-1,0
+OPTIONS seekSpeed 10
+OPTIONS rotateSpeed 0.1
+OPTIONS skew 0
+OPTIONS window -1
+OPTIONS policy FIFO
+OPTIONS compute True
+OPTIONS graphics False
+OPTIONS zoning 30,30,30
+OPTIONS lateAddr -1
+OPTIONS lateAddrDesc 0,-1,0
+
+z 0 30
+z 1 30
+z 2 30
+0 30 0
+0 30 1
+0 30 2
+0 30 3
+0 30 4
+0 30 5
+0 30 6
+0 30 7
+0 30 8
+0 30 9
+0 30 10
+0 30 11
+1 0 30 12
+1 0 30 13
+1 0 30 14
+1 0 30 15
+1 0 30 16
+1 0 30 17
+1 0 30 18
+1 0 30 19
+1 0 30 20
+1 0 30 21
+1 0 30 22
+1 0 30 23
+2 0 30 24
+2 0 30 25
+2 0 30 26
+2 0 30 27
+2 0 30 28
+2 0 30 29
+2 0 30 30
+2 0 30 31
+2 0 30 32
+2 0 30 33
+2 0 30 34
+2 0 30 35
+REQUESTS ['7', '30', '8']
+
+Block:   7  Seek:  0  Rotate:150  Transfer:299  Total: 449
+Block:  30  Seek:  8  Rotate:2992  Transfer:301  Total:3301
+Block:   8  Seek:  8  Rotate:291  Transfer:300  Total: 599
+
+TOTALS      Seek: 16  Rotate:3433  Transfer:900  Total:4349
+
+
+( -a 7,30,8 -S 10 -R 0.5)
+OPTIONS seed 0
+OPTIONS addr 7,30,8
+OPTIONS addrDesc 5,-1,0
+OPTIONS seekSpeed 10
+OPTIONS rotateSpeed 0.5
+OPTIONS skew 0
+OPTIONS window -1
+OPTIONS policy FIFO
+OPTIONS compute True
+OPTIONS graphics False
+OPTIONS zoning 30,30,30
+OPTIONS lateAddr -1
+OPTIONS lateAddrDesc 0,-1,0
+
+z 0 30
+z 1 30
+z 2 30
+0 30 0
+0 30 1
+0 30 2
+0 30 3
+0 30 4
+0 30 5
+0 30 6
+0 30 7
+0 30 8
+0 30 9
+0 30 10
+0 30 11
+1 0 30 12
+1 0 30 13
+1 0 30 14
+1 0 30 15
+1 0 30 16
+1 0 30 17
+1 0 30 18
+1 0 30 19
+1 0 30 20
+1 0 30 21
+1 0 30 22
+1 0 30 23
+2 0 30 24
+2 0 30 25
+2 0 30 26
+2 0 30 27
+2 0 30 28
+2 0 30 29
+2 0 30 30
+2 0 30 31
+2 0 30 32
+2 0 30 33
+2 0 30 34
+2 0 30 35
+REQUESTS ['7', '30', '8']
+
+Block:   7  Seek:  0  Rotate: 30  Transfer: 60  Total:  90
+Block:  30  Seek:  8  Rotate:592  Transfer: 60  Total: 660
+Block:   8  Seek:  8  Rotate: 52  Transfer: 60  Total: 120
+
+TOTALS      Seek: 16  Rotate:674  Transfer:180  Total: 870
+
+
+( -a 7,30,8 -S 10 -R 0.01)
+OPTIONS seed 0
+OPTIONS addr 7,30,8
+OPTIONS addrDesc 5,-1,0
+OPTIONS seekSpeed 10
+OPTIONS rotateSpeed 0.01
+OPTIONS skew 0
+OPTIONS window -1
+OPTIONS policy FIFO
+OPTIONS compute True
+OPTIONS graphics False
+OPTIONS zoning 30,30,30
+OPTIONS lateAddr -1
+OPTIONS lateAddrDesc 0,-1,0
+
+z 0 30
+z 1 30
+z 2 30
+0 30 0
+0 30 1
+0 30 2
+0 30 3
+0 30 4
+0 30 5
+0 30 6
+0 30 7
+0 30 8
+0 30 9
+0 30 10
+0 30 11
+1 0 30 12
+1 0 30 13
+1 0 30 14
+1 0 30 15
+1 0 30 16
+1 0 30 17
+1 0 30 18
+1 0 30 19
+1 0 30 20
+1 0 30 21
+1 0 30 22
+1 0 30 23
+2 0 30 24
+2 0 30 25
+2 0 30 26
+2 0 30 27
+2 0 30 28
+2 0 30 29
+2 0 30 30
+2 0 30 31
+2 0 30 32
+2 0 30 33
+2 0 30 34
+2 0 30 35
+REQUESTS ['7', '30', '8']
+
+Block:   7  Seek:  0  Rotate:1500  Transfer:3000  Total:4500
+Block:  30  Seek:  8  Rotate:29992  Transfer:3001  Total:33001
+Block:   8  Seek:  8  Rotate:2992  Transfer:2999  Total:5999
+
+TOTALS      Seek: 16  Rotate:34484  Transfer:9000  Total:43500
+
+
+( -a 7,30,8 -S 40 -R 0.1)
+OPTIONS seed 0
+OPTIONS addr 7,30,8
+OPTIONS addrDesc 5,-1,0
+OPTIONS seekSpeed 40
+OPTIONS rotateSpeed 0.1
+OPTIONS skew 0
+OPTIONS window -1
+OPTIONS policy FIFO
+OPTIONS compute True
+OPTIONS graphics False
+OPTIONS zoning 30,30,30
+OPTIONS lateAddr -1
+OPTIONS lateAddrDesc 0,-1,0
+
+z 0 30
+z 1 30
+z 2 30
+0 30 0
+0 30 1
+0 30 2
+0 30 3
+0 30 4
+0 30 5
+0 30 6
+0 30 7
+0 30 8
+0 30 9
+0 30 10
+0 30 11
+1 0 30 12
+1 0 30 13
+1 0 30 14
+1 0 30 15
+1 0 30 16
+1 0 30 17
+1 0 30 18
+1 0 30 19
+1 0 30 20
+1 0 30 21
+1 0 30 22
+1 0 30 23
+2 0 30 24
+2 0 30 25
+2 0 30 26
+2 0 30 27
+2 0 30 28
+2 0 30 29
+2 0 30 30
+2 0 30 31
+2 0 30 32
+2 0 30 33
+2 0 30 34
+2 0 30 35
+REQUESTS ['7', '30', '8']
+
+Block:   7  Seek:  0  Rotate:150  Transfer:299  Total: 449
+Block:  30  Seek:  2  Rotate:2998  Transfer:301  Total:3301
+Block:   8  Seek:  2  Rotate:297  Transfer:300  Total: 599
+
+TOTALS      Seek:  4  Rotate:3445  Transfer:900  Total:4349
+
+
+( -a 7,30,8 -S 40 -R 0.5)
+OPTIONS seed 0
+OPTIONS addr 7,30,8
+OPTIONS addrDesc 5,-1,0
+OPTIONS seekSpeed 40
+OPTIONS rotateSpeed 0.5
+OPTIONS skew 0
+OPTIONS window -1
+OPTIONS policy FIFO
+OPTIONS compute True
+OPTIONS graphics False
+OPTIONS zoning 30,30,30
+OPTIONS lateAddr -1
+OPTIONS lateAddrDesc 0,-1,0
+
+z 0 30
+z 1 30
+z 2 30
+0 30 0
+0 30 1
+0 30 2
+0 30 3
+0 30 4
+0 30 5
+0 30 6
+0 30 7
+0 30 8
+0 30 9
+0 30 10
+0 30 11
+1 0 30 12
+1 0 30 13
+1 0 30 14
+1 0 30 15
+1 0 30 16
+1 0 30 17
+1 0 30 18
+1 0 30 19
+1 0 30 20
+1 0 30 21
+1 0 30 22
+1 0 30 23
+2 0 30 24
+2 0 30 25
+2 0 30 26
+2 0 30 27
+2 0 30 28
+2 0 30 29
+2 0 30 30
+2 0 30 31
+2 0 30 32
+2 0 30 33
+2 0 30 34
+2 0 30 35
+REQUESTS ['7', '30', '8']
+
+Block:   7  Seek:  0  Rotate: 30  Transfer: 60  Total:  90
+Block:  30  Seek:  2  Rotate:598  Transfer: 60  Total: 660
+Block:   8  Seek:  2  Rotate: 58  Transfer: 60  Total: 120
+
+TOTALS      Seek:  4  Rotate:686  Transfer:180  Total: 870
+
+
+( -a 7,30,8 -S 40 -R 0.01)
+OPTIONS seed 0
+OPTIONS addr 7,30,8
+OPTIONS addrDesc 5,-1,0
+OPTIONS seekSpeed 40
+OPTIONS rotateSpeed 0.01
+OPTIONS skew 0
+OPTIONS window -1
+OPTIONS policy FIFO
+OPTIONS compute True
+OPTIONS graphics False
+OPTIONS zoning 30,30,30
+OPTIONS lateAddr -1
+OPTIONS lateAddrDesc 0,-1,0
+
+z 0 30
+z 1 30
+z 2 30
+0 30 0
+0 30 1
+0 30 2
+0 30 3
+0 30 4
+0 30 5
+0 30 6
+0 30 7
+0 30 8
+0 30 9
+0 30 10
+0 30 11
+1 0 30 12
+1 0 30 13
+1 0 30 14
+1 0 30 15
+1 0 30 16
+1 0 30 17
+1 0 30 18
+1 0 30 19
+1 0 30 20
+1 0 30 21
+1 0 30 22
+1 0 30 23
+2 0 30 24
+2 0 30 25
+2 0 30 26
+2 0 30 27
+2 0 30 28
+2 0 30 29
+2 0 30 30
+2 0 30 31
+2 0 30 32
+2 0 30 33
+2 0 30 34
+2 0 30 35
+REQUESTS ['7', '30', '8']
+
+Block:   7  Seek:  0  Rotate:1500  Transfer:3000  Total:4500
+Block:  30  Seek:  2  Rotate:29998  Transfer:3001  Total:33001
+Block:   8  Seek:  2  Rotate:2998  Transfer:2999  Total:5999
+
+TOTALS      Seek:  4  Rotate:34496  Transfer:9000  Total:43500
+
+
+( -a 7,30,8 -S 0.1 -R 0.1)
+OPTIONS seed 0
+OPTIONS addr 7,30,8
+OPTIONS addrDesc 5,-1,0
+OPTIONS seekSpeed 0.1
+OPTIONS rotateSpeed 0.1
+OPTIONS skew 0
+OPTIONS window -1
+OPTIONS policy FIFO
+OPTIONS compute True
+OPTIONS graphics False
+OPTIONS zoning 30,30,30
+OPTIONS lateAddr -1
+OPTIONS lateAddrDesc 0,-1,0
+
+z 0 30
+z 1 30
+z 2 30
+0 30 0
+0 30 1
+0 30 2
+0 30 3
+0 30 4
+0 30 5
+0 30 6
+0 30 7
+0 30 8
+0 30 9
+0 30 10
+0 30 11
+1 0 30 12
+1 0 30 13
+1 0 30 14
+1 0 30 15
+1 0 30 16
+1 0 30 17
+1 0 30 18
+1 0 30 19
+1 0 30 20
+1 0 30 21
+1 0 30 22
+1 0 30 23
+2 0 30 24
+2 0 30 25
+2 0 30 26
+2 0 30 27
+2 0 30 28
+2 0 30 29
+2 0 30 30
+2 0 30 31
+2 0 30 32
+2 0 30 33
+2 0 30 34
+2 0 30 35
+REQUESTS ['7', '30', '8']
+
+Block:   7  Seek:  0  Rotate:150  Transfer:299  Total: 449
+Block:  30  Seek:801  Rotate:2199  Transfer:301  Total:3301
+Block:   8  Seek:801  Rotate:3098  Transfer:300  Total:4199
+
+TOTALS      Seek:1602  Rotate:5447  Transfer:900  Total:7949
+
+
+( -a 7,30,8 -S 0.1 -R 0.5)
+OPTIONS seed 0
+OPTIONS addr 7,30,8
+OPTIONS addrDesc 5,-1,0
+OPTIONS seekSpeed 0.1
+OPTIONS rotateSpeed 0.5
+OPTIONS skew 0
+OPTIONS window -1
+OPTIONS policy FIFO
+OPTIONS compute True
+OPTIONS graphics False
+OPTIONS zoning 30,30,30
+OPTIONS lateAddr -1
+OPTIONS lateAddrDesc 0,-1,0
+
+z 0 30
+z 1 30
+z 2 30
+0 30 0
+0 30 1
+0 30 2
+0 30 3
+0 30 4
+0 30 5
+0 30 6
+0 30 7
+0 30 8
+0 30 9
+0 30 10
+0 30 11
+1 0 30 12
+1 0 30 13
+1 0 30 14
+1 0 30 15
+1 0 30 16
+1 0 30 17
+1 0 30 18
+1 0 30 19
+1 0 30 20
+1 0 30 21
+1 0 30 22
+1 0 30 23
+2 0 30 24
+2 0 30 25
+2 0 30 26
+2 0 30 27
+2 0 30 28
+2 0 30 29
+2 0 30 30
+2 0 30 31
+2 0 30 32
+2 0 30 33
+2 0 30 34
+2 0 30 35
+REQUESTS ['7', '30', '8']
+
+Block:   7  Seek:  0  Rotate: 30  Transfer: 60  Total:  90
+Block:  30  Seek:801  Rotate:519  Transfer: 60  Total:1380
+Block:   8  Seek:801  Rotate:699  Transfer: 60  Total:1560
+
+TOTALS      Seek:1602  Rotate:1248  Transfer:180  Total:3030
+
+
+( -a 7,30,8 -S 0.1 -R 0.01)
+OPTIONS seed 0
+OPTIONS addr 7,30,8
+OPTIONS addrDesc 5,-1,0
+OPTIONS seekSpeed 0.1
+OPTIONS rotateSpeed 0.01
+OPTIONS skew 0
+OPTIONS window -1
+OPTIONS policy FIFO
+OPTIONS compute True
+OPTIONS graphics False
+OPTIONS zoning 30,30,30
+OPTIONS lateAddr -1
+OPTIONS lateAddrDesc 0,-1,0
+
+z 0 30
+z 1 30
+z 2 30
+0 30 0
+0 30 1
+0 30 2
+0 30 3
+0 30 4
+0 30 5
+0 30 6
+0 30 7
+0 30 8
+0 30 9
+0 30 10
+0 30 11
+1 0 30 12
+1 0 30 13
+1 0 30 14
+1 0 30 15
+1 0 30 16
+1 0 30 17
+1 0 30 18
+1 0 30 19
+1 0 30 20
+1 0 30 21
+1 0 30 22
+1 0 30 23
+2 0 30 24
+2 0 30 25
+2 0 30 26
+2 0 30 27
+2 0 30 28
+2 0 30 29
+2 0 30 30
+2 0 30 31
+2 0 30 32
+2 0 30 33
+2 0 30 34
+2 0 30 35
+REQUESTS ['7', '30', '8']
+
+Block:   7  Seek:  0  Rotate:1500  Transfer:3000  Total:4500
+Block:  30  Seek:801  Rotate:29199  Transfer:3001  Total:33001
+Block:   8  Seek:801  Rotate:2199  Transfer:2999  Total:5999
+
+TOTALS      Seek:1602  Rotate:32898  Transfer:9000  Total:43500
+
+
