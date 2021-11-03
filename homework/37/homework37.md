@@ -161,23 +161,43 @@ TOTALS      Seek: 40  Rotate:125  Transfer:120  Total: 285
 7, Given the default seek rate, what should the skew be to minimize the total time for this set of requests?
 What about for different seek rates (e.g., -S 2, -S 4)? In general, could you write a formula to figure out the skew, given the seek rate and sector layout information?
 
+```
+S(skew)  >= T(seek time per track) / R(rotational time per block)
+```
+
 8, Multi-zone disks pack more sectors into the outer tracks. To configure
 this disk in such a way, run with the -z flag. Specifically, try
-running some requests against a disk run with -z 10,20,30 (the
+running some requests against a disk run with `-z 10,20,30` (the
 numbers specify the angular space occupied by a sector, per track;
 in this example, the outer track will be packed with a sector every
 10 degrees, the middle track every 20 degrees, and the inner track
-with a sector every 30 degrees). Run some random requests (e.g.,
--a -1 -A 5,-1,0, which specifies that random requests should
-be used via the -a -1 flag and that five requests ranging from 0 to
-the max be generated), and see if you can compute the seek, rotation,
-and transfer times. Use different random seeds (-s 1, -s 2,
-etc.). What is the bandwidth (in sectors per unit time) on the outer,
-middle, and inner tracks?
+with a sector every 30 degrees). 
+
+![](model2.jpg)
+
+Run some random requests (e.g., `-a -1 -A 5,-1,0`, which specifies that random requests should
+be used via the -a -1 flag and that five requests ranging from 0 to the max be generated), and see if you can compute the seek, rotation, and transfer times. Use different random seeds (-s 1, -s 2,
+etc.). What is the bandwidth (in sectors per unit time) on the outer, middle, and inner tracks?
+
+```
+REQUESTS [45, 40, 22, 13, 27]
+
+Block: 45   Seek: 40   Rotate: 310  Transfer: 20  Total: 370
+Block: 40   Seek:  0 Rotate: 240   Transfer: 20  Total: 300 
+Block: 22   Seek: 40  Rotate: 85  Transfer: 10  Total:  135
+Block: 13   Seek: 0   Rotate: 260   Transfer: 10  Total: 270
+Block: 27   Seek: 0   Rotate: 130   Transfer: 10  Total: 140
+
+TOTALS      Seek: 80  Rotate: 1025 Transfer: 70 Total: 1175
+```
+
+```
+B(bandwith) = 1 / d(degrees per sector)
+```
 
 9, Scheduling windows determine how many sector requests a disk
-can examine at once in order to determine which sector to serve
-next. Generate some random workloads of a lot of requests (e.g.,
+can examine at once <u>in order to determine which sector to serve</u>
+<u>next</u>. Generate some random workloads of a lot of requests (e.g.,
 -A 1000,-1,0, with different seeds perhaps) and see how long
 the SATF scheduler takes when the scheduling window is changed
 from 1 up to the number of requests (e.g., -w 1 up to -w 1000,
@@ -187,7 +207,12 @@ and see. Hint: use the -c flag and don’t turn on graphics with -G
 to run these more quickly. When the scheduling window is set to 1,
 does it matter which policy you are using?
 
-10, Avoiding starvation is important in a scheduler. Can you think of a
+![](C:\Users\Sakiharu\Documents\GitHub\ostep-notes\homework\37\graph-sw.jpg)
+
+> x axis : Scheduling window size
+> y axis : Total time
+
+10, **Avoiding** **starvation** is important in a scheduler. Can you think of a
 series of requests such that a particular sector is delayed for a very
 long time given a policy such as SATF? Given that sequence, how
 does it perform if you use a bounded SATF or BSATF scheduling
@@ -196,10 +221,32 @@ approach? In this approach, you specify the scheduling window
 then will only move onto the next window of requests when all of
 the requests in the current window have been serviced. Does this
 solve the starvation problem? How does it perform, as compared
-to SATF? In general, how should a diskmake this trade-off between
+to SATF? In general, how should a disk make this trade-off between
 performance and starvation avoidance?
+
+```
+$ python3 q10.py
+
+REQUESTS ['35', '7', '8', '9', '10', '11', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '0', '1', '2', '3']
+```
+
+> The first request takes more time than each of subsequent requests thus starvation occurs.
+
+> If the window value is small enough with the BSTAF policy, then the starvation could be avoided.
 
 11, All the scheduling policies we have looked at thus far are greedy,
 in that they simply pick the next best option instead of looking for
 the optimal schedule over a set of requests. Can you find a set of
 requests in which this greedy approach is not optimal?
+
+```
+REQUESTS ['34', '35', '7', '8']
+(FIFO)
+TOTALS      Seek:160  Rotate:155  Transfer:120  Total: 435
+(SATF)
+TOTALS      Seek: 80  Rotate:325  Transfer:120  Total: 525
+(SSTF)
+TOTALS      Seek: 80  Rotate:325  Transfer:120  Total: 525
+```
+
+> FIFO is the best option for the request.
