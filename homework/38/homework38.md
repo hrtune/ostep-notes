@@ -210,6 +210,8 @@ with RAID level, and when doing reads versus writes? How about
 when varying the size of each request? What size should you write
 to a RAID when using RAID-4 or RAID-5?
 
+!!! Wrong (I didn't scale the size of requests.)
+
 | Raid \ Requests | 10 (Read) | 10 (Write) | 100 (Read) | 100 (Write) | 1000 (Read) | 1000 (Write) |
 | --------------- | --------- | ---------- | ---------- | ----------- | ----------- | ------------ |
 | 0 (4 disks)     | 10.3      | 10.3       | 12.5       | 12.5        | 35          | 35           |
