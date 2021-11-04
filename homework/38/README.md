@@ -98,8 +98,8 @@ LOGICAL READ from addr:9 size:4096
   read  [disk 1, offset 2]   
 ```
 
-Because we like to have fun, you can also do this problem in reverse, with the
-"-r" flag. Running the simulator this way shows you the low-level disk reads
+Because we like to have fun, you can also do this problem **in reverse**, with the
+"**-r**" flag. Running the simulator this way shows you the low-level disk reads
 and writes, and asks you to reverse engineer which logical request must have
 been given to the RAID:
 
