@@ -8,10 +8,17 @@ programs, mostly based on various UNIX utilities.
 
 1, Stat: Write your own version of the command line program stat,
 which simply calls the stat() system call on a given file or directory.
-Print out file size, number of blocks allocated, reference
-(link) count, and so forth. What is the link count of a directory, as
+Print out 
+
+- file size, 
+- number of blocks allocated, 
+- reference (link) count, and so forth. 
+
+What is the link count of a directory, as
 the number of entries in the directory changes? Useful interfaces:
 stat()
+
+> It remains 1
 
 2, List Files: Write a program that lists files in the given directory.
 When called without any arguments, the program should just print
@@ -42,3 +49,9 @@ the entire tree, root at the CWD, is printed. If given a single argument
 Refine your recursive search with more fun options, similar to the
 powerful find command line tool. Useful interfaces: you figure it
 out.
+
+```
+!!!
+This question has not done yet.
+```
+
