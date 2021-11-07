@@ -103,13 +103,103 @@ change while being shown the operation. What can you conclude
 about the inode and data-block allocation algorithms, in terms of
 which blocks they prefer to allocate?
 
+```sh
+Initial state
 
+inode bitmap  10000000
+inodes       [d a:0 r:2][][][][][][][]
+data bitmap   10000000
+data         [(.,0) (..,0)][][][][][][][]
+
+mkdir("/o");
+
+inode bitmap  11000000
+inodes       [d a:0 r:3][d a:1 r:1][][][][][][]
+data bitmap   11000000
+data         [(.,0) (..,0) (o,1)][(.,1) (..,0)][][][][][][]
+
+creat("/b");
+
+inode bitmap  11100000
+inodes       [d a:0 r:3][d a:1 r:1][f a:-1 r:1][][][][][]
+data bitmap   11000000
+data         [(.,0) (..,0) (o,1) (b,2)][(.,1) (..,0)][][][][][][]
+
+creat("/o/q");
+
+inode bitmap  11110000
+inodes       [d a:0 r:3][d a:1 r:1][f a:-1 r:1][f a:-1 r:1][][][][]
+data bitmap   11000000
+data         [(.,0) (..,0) (o,1) (b,2)][(.,1) (..,0) (q,3)][][][][][][]
+
+fd=open("/b", O_WRONLY|O_APPEND); write(fd, buf, BLOCKSIZE); close(fd);
+
+inode bitmap  11110000
+inodes       [d a:0 r:3][d a:1 r:1][f a:2 r:1][f a:-1 r:1][][][][]
+data bitmap   11100000
+data         [(.,0) (..,0) (o,1) (b,2)][(.,1) (..,0) (q,3)][u][][][][][]
+
+fd=open("/o/q", O_WRONLY|O_APPEND); write(fd, buf, BLOCKSIZE); close(fd);
+
+inode bitmap  11110000
+inodes       [d a:0 r:3][d a:1 r:1][f a:2 r:1][f a:3 r:1][][][][]
+data bitmap   11110000
+data         [(.,0) (..,0) (o,1) (b,2)][(.,1) (..,0) (q,3)][u][v][][][][]
+
+creat("/o/j");
+
+inode bitmap  11111000
+inodes       [d a:0 r:3][d a:1 r:1][f a:2 r:1][f a:3 r:1][f a:-1 r:1][][][]
+data bitmap   11110000
+data         [(.,0) (..,0) (o,1) (b,2)][(.,1) (..,0) (q,3) (j,4)][u][v][][][][]
+
+unlink("/b");
+
+inode bitmap  11011000
+inodes       [d a:0 r:3][d a:1 r:1][][f a:3 r:1][f a:-1 r:1][][][]
+data bitmap   11010000
+data         [(.,0) (..,0) (o,1)][(.,1) (..,0) (q,3) (j,4)][][v][][][][]
+
+fd=open("/o/j", O_WRONLY|O_APPEND); write(fd, buf, BLOCKSIZE); close(fd);
+
+inode bitmap  11011000
+inodes       [d a:0 r:3][d a:1 r:1][][f a:3 r:1][f a:2 r:1][][][]
+data bitmap   11110000
+data         [(.,0) (..,0) (o,1)][(.,1) (..,0) (q,3) (j,4)][u][v][][][][]
+
+
+creat("/o/x");
+
+inode bitmap  11111000
+inodes       [d a:0 r:3][d a:1 r:1][f a:-1 r:1][f a:3 r:1][f a:2 r:1][][][]
+data bitmap   11110000
+data         [(.,0) (..,0) (o,1)][(.,1) (..,0) (q,3) (j,4) (x,2)][u][v][][][][]
+
+mkdir("/o/t");
+
+inode bitmap  11111100
+inodes       [d a:0 r:3][d a:1 r:3][f a:-1 r:1][f a:3 r:1][f a:2 r:1][d a:4 r:2][][]
+data bitmap   11111000
+data         [(.,0) (..,0) (o,1)][(.,1) (..,0) (q,3) (j,4) (x,2) (t,5)][u][v][(.,5) (..,1)][][][]
+```
 
 3, Now reduce the number of data blocks in the file system, to very
 low numbers (say two), and run the simulator for a hundred or so
-requests. What types of files end up in the file systemin this highlyconstrained
+requests. What types of files end up in the file system in this highly constrained
 layout? What types of operations would fail?
 
+> Making directory or writing file would fail.
+
 4, Now do the same, but with inodes. With very few inodes, what
-types of operations can succeed? Which will usually fail? What is
-the final state of the file system likely to be?
+types of operations can succeed? 
+
+> No operations succeed.
+
+- Which will usually fail?
+
+  > Creating file or making directory fails.
+
+- What is the final state of the file system likely to be?
+
+  > It ends up with the initial state.
+

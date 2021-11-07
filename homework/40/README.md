@@ -18,20 +18,20 @@ To understand how this homework functions, you must first understand how the
 on-disk state of this file system is represented.  The state of the file
 system is shown by printing the contents of four different data structures:
 
-- inode bitmap: indicates which inodes are allocated
-- inodes: table of inodes and their contents
-- data bitmap: indicates which data blocks are allocated
-- data: indicates contents of data blocks
+- **inode bitmap**: indicates which inodes are allocated
+- **inodes**: table of inodes and their contents
+- **data bitmap**: indicates which data blocks are allocated
+- **data**: indicates contents of data blocks
 
 The bitmaps should be fairly straightforward to understand, with a 1
 indicating that the corresponding inode or data block is allocated, and a 0
 indicating said inode or data block is free.
 
-The inodes each have three fields: the first field indicates the type of file
-(e.g., f for a regular file, d for a directory); the second indicates which
+The inodes each have three fields: the *first* field indicates the type of file
+(e.g., **f** for a regular file, **d** for a directory); the *second* indicates which
 data block belongs to a file (here, files can only be empty, which would have
-the address of the data block set to -1, or one block in size, which would
-have a non-negative address); the third shows the reference count for the file
+the address of the data block set to **-1**, or one block in size, which would
+have a non-negative address); the *third* shows the **reference count** for the file
 or directory. For example, the following inode is a regular file, which is
 empty (address field set to -1), and has just one link in the file system:
 
@@ -46,15 +46,15 @@ as follows:
   [f a:10 r:1]
 ```
 
-If someone then created a hard link to this inode, it would then become:
+If someone then created a **hard link** to this inode, it would then become:
 
 ```sh
   [f a:10 r:2]
 ```
 
-Finally, data blocks can either retain user data or directory data. If filled
-with directory data, each entry within the block is of the form (name,
-inumber), where "name" is the name of the file or directory, and "inumber" is
+Finally, *data blocks* can either retain **user data** or **directory data**. If filled
+with directory data, each entry within the block is of the form `(name,`
+`inumber)`, where "name" is the name of the file or directory, and "inumber" is
 the inode number of the file. Thus, an empty root directory looks like this,
 assuming the root inode is 0:
 
