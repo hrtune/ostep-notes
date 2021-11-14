@@ -45,8 +45,8 @@ its checking ability?
 
 > Obviously it is worse than XOR or Fletcher.
 
-Now build a tool (`create-csum.c`) that computes a single-byte
-checksum for every 4KB block of a file, and records the results in
+Now build a tool (`create-csum.c`) that computes a **single-byte**
+**checksum** for every 4KB block of a file, and records the results in
 an output file (specified on the command line). Build a related tool
 (`check-csum.c`) that reads a file, computes the checksums over
 each block, and compares the results to the stored checksums stored
